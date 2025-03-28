@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENZIMA TECH - Professional Hacking Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Lato:wght@400;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <div class="container">
+            <div class="top-contact">
+                <a href="mailto:support@benzimatech.com"><i class="fas fa-envelope"></i> support@benzimatech.com</a>
+                <a href="tel:+15551234567"><i class="fas fa-phone"></i> +1 (555) 123-4567</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://files.catbox.moe/feni5z.webp" alt="Benzima Tech Logo" class="logo-img">
+                <div class="logo-text">BENZIMA <span>TECH</span></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="tools">Tools</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="chat.html">Global Chat</a></li>
+                    <li><a href="admin-login.html">Admin</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" id="mobile-menu-open">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="logo">
+                <img src="https://files.catbox.moe/feni5z.webp" alt="Benzima Tech Logo" class="logo-img" style="width: 40px; height: 40px;">
+                <div class="logo-text">BENZIMA <span>TECH</span></div>
+            </div>
+            <button class="mobile-menu-close" id="mobile-menu-close">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="chat.html">Global Chat</a></li>
+                <li><a href="admin-login.html">Admin</a></li>
+            </ul>
+        </nav>
+        <div class="mobile-menu-footer">
+            <p>Connect with us</p>
+            <div class="mobile-menu-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Professional Hacking Tools & Resources</h1>
+                <p>Discover powerful tools for cybersecurity professionals, ethical hackers, and tech enthusiasts. All tools are provided for educational purposes only.</p>
+                <a href="#tools" class="hero-btn">Explore Tools</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="categories" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Tools</h2>
+            </div>
+            
+            <div class="category-filters">
+                <button class="category-btn active" data-category="all">All Tools</button>
+                <button class="category-btn" data-category="random">Random Tools</button>
+                <button class="category-btn" data-category="termux">Termux Tools</button>
+                <button class="category-btn" data-category="premium">Premium Apps</button>
+            </div>
+            
+            <div class="tools-grid" id="tool-list">
+                <!-- Loading spinner shown until tools are loaded -->
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+                <!-- Tools will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="https://files.catbox.moe/drmyvn.jpg" alt="Benzima Tech Logo">
+                        <div class="footer-logo-text">BENZIMA <span>TECH</span></div>
+                    </div>
+                    <p>Providing professional hacking tools and resources for cybersecurity professionals and tech enthusiasts. All tools are provided for educational purposes only.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#tools"><i class="fas fa-chevron-right"></i> Tools</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="chat.html"><i class="fas fa-chevron-right"></i> Global Chat</a></li>
+                        <li><a href="admin-login.html"><i class="fas fa-chevron-right"></i> Admin</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Tech Street, Silicon Valley, CA 94043</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>support@benzimatech.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BENZIMA TECH. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for command inspection -->
+    <div class="modal-overlay" id="command-modal">
+        <div class="modal">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Command Details</h3>
+            <div class="modal-content">
+                <pre id="modal-command"></pre>
+            </div>
+            <div class="modal-footer">
+                <button class="tool-btn btn-primary" id="modal-copy-btn">
+                    <i class="fas fa-copy"></i> Copy Command
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-open').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('active');
+            document.getElementById('overlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        document.getElementById('overlay').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('active');
+            document.getElementById('overlay').classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Category Buttons
+        const categoryButtons = document.querySelectorAll('.category-btn');
+        categoryButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                categoryButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.getAttribute('data-category');
+                // This will be handled by the existing script.js
+            });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+

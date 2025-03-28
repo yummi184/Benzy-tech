@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - EmmyHenz Tech</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="admin-style.css">
+    <style>
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .logo-svg {
+            width: 60px;
+            height: 60px;
+            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <div class="logo-container">
+                    <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#4361ee" />
+                                <stop offset="100%" stop-color="#3a0ca3" />
+                            </linearGradient>
+                            <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <circle cx="100" cy="100" r="90" fill="white" />
+                        <path d="M100,20 C55.82,20 20,55.82 20,100 C20,144.18 55.82,180 100,180 C144.18,180 180,144.18 180,100 C180,55.82 144.18,20 100,20 Z M100,40 C133.14,40 160,66.86 160,100 C160,133.14 133.14,160 100,160 C66.86,160 40,133.14 40,100 C40,66.86 66.86,40 100,40 Z" fill="url(#logoGradient)" filter="url(#glow)" />
+                        <path d="M85,70 L85,130 L130,100 Z" fill="url(#logoGradient)" filter="url(#glow)" />
+                    </svg>
+                </div>
+                <h2>EmmyHenz Tech</h2>
+                <p>Admin Panel</p>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="#" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="tools">
+                            <i class="fas fa-tools"></i>
+                            <span>Manage Tools</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" data-section="add-tool">
+                            <i class="fas fa-plus-circle"></i>
+                            <span>Add New Tool</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Website</span>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <div class="header-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search tools..." id="search-tools">
+                </div>
+                
+                <div class="header-actions">
+                    <button id="mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+            
+            <!-- Dashboard Section -->
+            <section class="content-section active" id="dashboard">
+                <div class="section-header">
+                    <h2>Dashboard</h2>
+                    <p>Welcome to the EmmyHenz Tech admin panel</p>
+                </div>
+                
+                <div class="stats-cards">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="total-tools">0</h3>
+                            <p>Total Tools</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-terminal"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="termux-tools">0</h3>
+                            <p>Termux Tools</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="premium-tools">0</h3>
+                            <p>Premium Apps</p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3 id="random-tools">0</h3>
+                            <p>Random Tools</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recent-tools">
+                    <div class="section-header">
+                        <h3>Recently Added Tools</h3>
+                    </div>
+                    
+                    <div class="recent-tools-list" id="recent-tools-list">
+                        <!-- Recent tools will be loaded here -->
+                        <div class="loading">
+                            <div class="loading-spinner"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Tools Management Section -->
+            <section class="content-section" id="tools">
+                <div class="section-header">
+                    <h2>Manage Tools</h2>
+                    <p>Edit or delete existing tools</p>
+                </div>
+                
+                <div class="tools-filter">
+                    <div class="filter-group">
+                        <label for="category-filter">Filter by Category:</label>
+                        <select id="category-filter">
+                            <option value="all">All Categories</option>
+                            <option value="termux">Termux Tools</option>
+                            <option value="premium">Premium Apps</option>
+                            <option value="random">Random Tools</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="tools-table-container">
+                    <table class="tools-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tools-table-body">
+                            <!-- Tools will be loaded here -->
+                        </tbody>
+                    </table>
+                    
+                    <div class="loading" id="tools-loading">
+                        <div class="loading-spinner"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Add New Tool Section -->
+            <section class="content-section" id="add-tool">
+                <div class="section-header">
+                    <h2>Add New Tool</h2>
+                    <p>Create a new tool or application</p>
+                </div>
+                
+                <form id="add-tool-form" class="tool-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tool-name">Tool Name</label>
+                            <input type="text" id="tool-name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tool-category">Category</label>
+                            <select id="tool-category" name="category" required>
+                                <option value="">Select Category</option>
+                                <option value="termux">Termux Tool</option>
+                                <option value="premium">Premium App</option>
+                                <option value="random">Random Tool</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tool-description">Description</label>
+                        <textarea id="tool-description" name="description" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tool-image">Image URL</label>
+                        <input type="url" id="tool-image" name="image" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tool-link">Link</label>
+                        <input type="url" id="tool-link" name="link" required>
+                    </div>
+                    
+                    <div class="form-group" id="command-group" style="display: none;">
+                        <label for="tool-command">Termux Command</label>
+                        <textarea id="tool-command" name="command" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="reset" class="btn btn-secondary">
+                            <i class="fas fa-undo"></i>
+                            Reset
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus-circle"></i>
+                            Add Tool
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Edit Tool Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit Tool</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            
+            <form id="edit-tool-form" class="tool-form">
+                <input type="hidden" id="edit-tool-index">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="edit-tool-name">Tool Name</label>
+                        <input type="text" id="edit-tool-name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="edit-tool-category">Category</label>
+                        <select id="edit-tool-category" name="category" required>
+                            <option value="">Select Category</option>
+                            <option value="termux">Termux Tool</option>
+                            <option value="premium">Premium App</option>
+                            <option value="random">Random Tool</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-tool-description">Description</label>
+                    <textarea id="edit-tool-description" name="description" rows="3" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-tool-image">Image URL</label>
+                    <input type="url" id="edit-tool-image" name="image" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit-tool-link">Link</label>
+                    <input type="url" id="edit-tool-link" name="link" required>
+                </div>
+                
+                <div class="form-group" id="edit-command-group">
+                    <label for="edit-tool-command">Termux Command</label>
+                    <textarea id="edit-tool-command" name="command" rows="3"></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancel-edit">
+                        <i class="fas fa-times"></i>
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-save"></i>
+                        Save Changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Delete Confirmation Modal -->
+    <div class="modal" id="delete-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Delete Tool</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p>Are you sure you want to delete <span id="delete-tool-name"></span>?</p>
+                <p class="warning">This action cannot be undone.</p>
+            </div>
+            
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-delete">
+                    <i class="fas fa-times"></i>
+                    Cancel
+                </button>
+                <button class="btn btn-danger" id="confirm-delete">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification -->
+    <div class="admin-notification" id="admin-notification"></div>
+    
+    <script src="admin-script.js"></script>
+</body>
+</html>
+

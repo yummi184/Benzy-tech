@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 1px auto;
+  background: white;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+header {
+  background: #0056b3;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+}
+
+.chat-box {
+  height: 500px;
+  overflow-y: auto;
+  padding: 0px;
+  background: #e5ddd5;
+}
+
+.input-box {
+  padding: 15px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  display: flex;
+  align-items: center;
+  width: 101%;
+  max-width: 800px;
+  margin: 1px auto;
+}
+
+.input-field textarea {
+  flex: 1; /* Allows it to take up remaining space */
+  width: 100%; /* Makes it match the width of the name input */
+  min-height: 50px; /* Adjust height */
+  max-height: 150px; /* Prevents excessive height */
+  padding: 12px;
+  font-size: 16px;
+  border: 7px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  resize: vertical; /* Allows resizing vertically */
+}
+
+.input-field button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 8px;
+}
+
+.input-field button:hover {
+  background-color: #0056b3;
+}
+
+input {
+  flex: 1;
+  padding: 8px;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  background: #128c7e;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background: #0d7359;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content {
+  background: white;
+  padding: 8px;
+  border-radius: 10px;
+  max-width: 75%;
+}
+
+.timestamp {
+  font-size: 0.8em;
+  color: gray;
+  margin-left: 10px;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* break message */
+.message-content p {
+  word-wrap: break-word; /* Break long words */
+  white-space: pre-wrap; /* Preserve new lines while wrapping */
+  max-width: 80%; /* Limit message width */
+  overflow-wrap: break-word; /* Ensure words break properly */
+}
+
