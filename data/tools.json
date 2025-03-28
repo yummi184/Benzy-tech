@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Image Compressor",
+    "description": "Compress your images without losing quality. Perfect for websites and social media to improve loading times and save bandwidth.",
+    "image": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/image-compressor",
+    "category": "random"
+  },
+  {
+    "name": "PDF Converter",
+    "description": "Convert documents to and from PDF format with ease. Supports multiple file types including Word, Excel, PowerPoint, and images.",
+    "image": "https://images.unsplash.com/photo-1537432376769-00f5c2f4c8d2?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/pdf-converter",
+    "category": "premium"
+  },
+  {
+    "name": "Termux Package Updater",
+    "description": "Keep your Termux installation up to date with the latest packages and security updates using this essential command.",
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/termux-updater",
+    "command": "apt update && apt upgrade -y",
+    "category": "termux"
+  },
+  {
+    "name": "Password Generator",
+    "description": "Generate strong, secure passwords with customizable options for length, complexity, and character types to enhance your online security.",
+    "image": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/password-generator",
+    "category": "random"
+  },
+  {
+    "name": "URL Shortener",
+    "description": "Shorten long URLs for easier sharing and tracking. Get detailed analytics on clicks, geographic location, and referral sources.",
+    "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/url-shortener",
+    "category": "premium"
+  },
+  {
+    "name": "Termux Git Clone",
+    "description": "Clone repositories directly to your Termux environment with this simple Git command. Perfect for developers on the go.",
+    "image": "https://images.unsplash.com/photo-1579547945413-497e1b99dac0?q=80&w=2039&auto=format&fit=crop",
+    "link": "/tools/termux-git",
+    "command": "git clone https://github.com/username/repository.git",
+    "category": "termux"
+  },
+  {
+    "name": "Termux Python Installer",
+    "description": "Install Python and essential packages in your Termux environment with this command. Ready for development in seconds.",
+    "image": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=2074&auto=format&fit=crop",
+    "link": "/tools/termux-python",
+    "command": "pkg install python python-pip -y && pip install requests beautifulsoup4 numpy",
+    "category": "termux"
+  },
+  {
+    "name": "Random Number Generator",
+    "description": "Generate truly random numbers with customizable ranges and distribution patterns for games, statistics, or simulations.",
+    "image": "https://images.unsplash.com/photo-1621264448270-9ef00e88a935?q=80&w=2072&auto=format&fit=crop",
+    "link": "/tools/random-generator",
+    "category": "random"
+  },
+  {
+    "name": "Termux Metasploit Installer",
+    "description": "Install the powerful Metasploit Framework on your Android device through Termux for penetration testing and security research.",
+    "image": "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/termux-metasploit",
+    "command": "pkg install wget -y && wget https://raw.githubusercontent.com/gushmazuko/metasploit_in_termux/master/metasploit.sh && chmod +x metasploit.sh && ./metasploit.sh",
+    "category": "termux"
+  },
+  {
+    "name": "Photo Editor Suite",
+    "description": "Advanced photo editing with professional filters, layers, masks, and RAW support. Transform your photos with precision tools.",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/photo-editor",
+    "category": "premium"
+  },
+  {
+    "name": "Termux SSH Server",
+    "description": "Set up an SSH server on your Android device to access it remotely from any computer. Perfect for managing your device on the go.",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=2070&auto=format&fit=crop",
+    "link": "/tools/termux-ssh",
+    "command": "pkg install openssh -y && sshd",
+    "category": "termux"
+  }
+]
